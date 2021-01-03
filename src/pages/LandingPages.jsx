@@ -6,6 +6,7 @@ import landingPage from "json/landingPage.json";
 import Hero from "parts/Hero";
 import MostPicked from "parts/MostPicked.js";
 import Categories from "parts/Categories.js";
+import Testimony from "parts/Testimony";
 const LandingPages = (props) => {
   console.log(props, "diar");
   return (
@@ -15,6 +16,7 @@ const LandingPages = (props) => {
       <Hero data={landingPage.hero}></Hero>
       <MostPicked data={landingPage.mostPicked} />
       <Categories className="" data={landingPage.categories}></Categories>
+      <Testimony data={landingPage.testimonial} />
     </div>
   );
 };
