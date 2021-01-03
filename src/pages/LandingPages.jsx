@@ -5,6 +5,7 @@ import Crud from "pages/crud";
 import landingPage from "json/landingPage.json";
 import Hero from "parts/Hero";
 import MostPicked from "parts/MostPicked.js";
+import Categories from "parts/Categories.js";
 const LandingPages = (props) => {
   console.log(props, "diar");
   return (
@@ -13,6 +14,7 @@ const LandingPages = (props) => {
       {/* <Crud></Crud> */}
       <Hero data={landingPage.hero}></Hero>
       <MostPicked data={landingPage.mostPicked} />
+      <Categories className="" data={landingPage.categories}></Categories>
     </div>
   );
 };
