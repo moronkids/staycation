@@ -34,7 +34,7 @@ export default function Button(props) {
     if(props.type === "link") {
         if(props.isExternal) {
             return (
-            <a href={props.href} className={className.join(" ") } style={props.style} target={props.target === "_blank" ? "_blank" : undefined} ref={props.target === "_blank" ? "noopener noreferrer" : undefined }>{props.children}{props.children}</a>
+            <a href={props.href} className={className.join(" ") } style={props.style} target={props.target === "_blank" ? "_blank" : undefined} ref={props.target === "_blank" ? "noopener noreferrer" : undefined }>{props.children}</a>
             )
         }
         else {
@@ -50,7 +50,7 @@ export default function Button(props) {
         className={className.join(" ")}
         style={props.style}
         onClick={onClick}
-      ></button>
+      >{props.children}</button>
     );
 }
 
@@ -61,6 +61,7 @@ Button.propTypes = {
     href: propTypes.string,
     className: propTypes.string,
     isDisabled: propTypes.bool,
+    isPrimary: propTypes.bool,
     isLoading: propTypes.bool,
     isSmall: propTypes.bool,
     isLarge: propTypes.bool,
